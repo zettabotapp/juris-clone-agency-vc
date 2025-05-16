@@ -122,8 +122,8 @@ export default {
         'slide-in-right': 'slide-in-right 0.5s ease-out',
 			},
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'opensans': ['Open Sans', 'sans-serif'],
+        'cormorant': ['Cormorant Garamond', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
 		}
 	},

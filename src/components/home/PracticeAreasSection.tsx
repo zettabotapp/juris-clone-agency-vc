@@ -75,7 +75,7 @@ const PracticeAreasSection = () => {
           <h2 className="section-title inline-block text-white mx-auto after:left-1/2 after:-translate-x-1/2">
             ATUAÇÃO
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-300 max-w-3xl mx-auto font-light">
             Contamos com profissionais especializados para atender diferentes demandas jurídicas,
             oferecendo soluções personalizadas e eficientes para cada caso.
           </p>
@@ -85,15 +85,15 @@ const PracticeAreasSection = () => {
           {areas.map((area, index) => (
             <div 
               key={index} 
-              className="bg-darkbg bg-opacity-80 rounded-lg p-6 border border-gold-900 hover:border-gold-500 transition-colors duration-300 flex flex-col"
+              className="bg-darkbg bg-opacity-80 rounded-lg p-6 border-l-4 border-gold-500 hover:border-l-8 transition-all duration-300 flex flex-col shadow-lg"
             >
               <div className="mb-4">
                 {area.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 font-playfair">
+              <h3 className="text-xl font-semibold text-white mb-3 font-cormorant">
                 {area.title}
               </h3>
-              <p className="text-gray-300 mb-4 text-sm flex-grow">
+              <p className="text-gray-300 mb-4 text-sm flex-grow font-light">
                 {area.description}
               </p>
               <ul className="mb-6 space-y-2">
@@ -106,9 +106,13 @@ const PracticeAreasSection = () => {
               </ul>
               <Link 
                 to={`/atuacao#${area.title.toLowerCase().replace(/\s+/g, '-')}`} 
-                className="text-gold-500 hover:text-gold-400 text-sm font-semibold mt-auto transition-colors"
+                className="text-gold-500 hover:text-gold-400 text-sm font-medium mt-auto transition-colors flex items-center"
               >
-                Saiba mais →
+                Saiba mais 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
               </Link>
             </div>
           ))}
