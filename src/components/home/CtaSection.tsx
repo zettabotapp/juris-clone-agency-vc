@@ -8,11 +8,11 @@ const CtaSection = () => {
         <div className="bg-darkbg rounded-lg shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Image Column */}
-            <div className="relative h-64 md:h-auto">
+            <div className="relative h-64 md:h-auto flex items-center justify-center p-4">
               <img 
                 src="/lovable-uploads/vieirasolucao.png" 
                 alt="VC Advogados Solução" 
-                className="object-contain w-full h-full"
+                className="object-contain max-w-[80%] max-h-[80%] w-auto h-auto"
               />
             </div>
                         
