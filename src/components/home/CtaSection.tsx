@@ -8,12 +8,12 @@ const CtaSection = () => {
         <div className="bg-darkbg rounded-lg shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Image Column */}
-            <div 
-              className="h-32 md:h-auto bg-cover bg-center"
-              style={{ 
-                backgroundImage: "url('/lovable-uploads/vieirasolucao.png')" 
-              }}
-            >
+            <div className="relative h-64 md:h-auto">
+              <img 
+                src="/lovable-uploads/vieirasolucao.png" 
+                alt="VC Advogados Solução" 
+                className="object-contain w-full h-full"
+              />
             </div>
                         
             {/* Content Column */}
