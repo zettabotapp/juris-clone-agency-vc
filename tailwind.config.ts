@@ -122,7 +122,6 @@ export default {
         'slide-in-right': 'slide-in-right 0.5s ease-out',
 			},
       fontFamily: {
-        'cormorant': ['Cormorant Garamond', 'serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
       },
 		}
