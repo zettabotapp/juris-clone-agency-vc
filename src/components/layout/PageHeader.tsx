@@ -15,7 +15,7 @@ interface PageHeaderProps {
 const PageHeader: React.FC<PageHeaderProps> = ({ 
   title, 
   breadcrumbs = [],
-  backgroundImage = "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1912&auto=format&fit=crop" 
+  backgroundImage = "/lovable-uploads/e881c3fc-ac11-4d4b-9a12-775d732a681e.png" 
 }) => {
   return (
     <div 
@@ -25,7 +25,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       }}
     >
       <div className="container-custom text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair">{title}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{title}</h1>
         
         {breadcrumbs.length > 0 && (
           <nav className="flex justify-center">
