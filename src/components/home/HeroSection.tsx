@@ -11,8 +11,8 @@ const HeroSection = () => {
     >
       <div className="container-custom py-20 mt-16 md:mt-0">
         <div className="max-w-2xl animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            VC Advogados Associados
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight whitespace-nowrap">
+            <span className="text-gold-500">VC</span> Advogados Associados
           </h1>
           <p className="text-xl text-white mb-8 max-w-lg">
             Soluções jurídicas personalizadas com excelência e compromisso para pessoas físicas e jurídicas.

@@ -27,7 +27,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-gold-500 font-playfair">VC <span className="text-white">Advogados</span></span>
+          <img
+            src="/lovable-uploads/logo.png"
+            alt="VC Advogados Logo"
+            className="h-24 w-auto" // aumentado de h-20 para h-24
+          />
           </Link>
 
           {/* Desktop Menu */}
