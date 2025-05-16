@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { 
   Building, 
@@ -64,43 +65,43 @@ const PracticeAreasSection = () => {
 
   return (
     <section 
-      className="py-20 relative bg-cover bg-center"
+      className="py-12 md:py-20 relative bg-cover bg-center"
       style={{ 
         backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')"
       }}
     >
       <div 
-        className="container-custom mx-auto" 
+        className="container-custom mx-auto px-4" 
         style={{ maxWidth: "110rem" }}
       >
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="section-title inline-block text-white mx-auto after:left-1/2 after:-translate-x-1/2">
             ATUAÇÃO
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto font-light">
+          <p className="text-gray-300 max-w-3xl mx-auto font-light px-4">
             Contamos com profissionais especializados para atender diferentes demandas jurídicas,
             oferecendo soluções personalizadas e eficientes para cada caso.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {areas.map((area, index) => (
             <div 
               key={index} 
-              className="bg-darkbg bg-opacity-80 rounded-lg p-6 border-l-4 border-gold-500 hover:border-l-8 transition-all duration-300 flex flex-col shadow-lg"
+              className="bg-darkbg bg-opacity-80 rounded-lg p-4 md:p-6 border-l-4 border-gold-500 hover:border-l-8 transition-all duration-300 flex flex-col shadow-lg"
             >
-              <div className="mb-4">
+              <div className="mb-3 md:mb-4">
                 {area.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 font-cormorant">
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 md:mb-3 font-cormorant">
                 {area.title}
               </h3>
-              <p className="text-gray-300 mb-4 text-sm flex-grow font-light">
+              <p className="text-gray-300 mb-3 md:mb-4 text-xs md:text-sm flex-grow font-light">
                 {area.description}
               </p>
-              <ul className="mb-6 space-y-2">
+              <ul className="mb-4 md:mb-6 space-y-1 md:space-y-2">
                 {area.items.map((item, i) => (
-                  <li key={i} className="text-gray-400 text-sm flex items-center">
+                  <li key={i} className="text-gray-400 text-xs md:text-sm flex items-center">
                     <span className="h-1.5 w-1.5 bg-gold-500 rounded-full mr-2"></span>
                     {item}
                   </li>
@@ -108,7 +109,7 @@ const PracticeAreasSection = () => {
               </ul>
               <Link 
                 to={`/atuacao#${area.title.toLowerCase().replace(/\s+/g, '-')}`} 
-                className="text-gold-500 hover:text-gold-400 text-sm font-medium mt-auto transition-colors flex items-center"
+                className="text-gold-500 hover:text-gold-400 text-xs md:text-sm font-medium mt-auto transition-colors flex items-center"
               >
                 Saiba mais 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1">

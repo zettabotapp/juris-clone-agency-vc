@@ -108,23 +108,40 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gold-500 hover:bg-gold-600 text-black font-semibold py-2 px-6 rounded-md transition-all duration-300 uppercase text-sm tracking-wider;
+    @apply bg-gold-500 hover:bg-gold-600 text-black font-semibold py-2 px-4 md:px-6 rounded-md transition-all duration-300 uppercase text-xs md:text-sm tracking-wider;
   }
   
   .btn-outline {
-    @apply bg-transparent border border-gold-500 hover:bg-gold-500 text-gold-500 hover:text-black font-semibold py-2 px-6 rounded-md transition-all duration-300 uppercase text-sm tracking-wider;
+    @apply bg-transparent border border-gold-500 hover:bg-gold-500 text-gold-500 hover:text-black font-semibold py-2 px-4 md:px-6 rounded-md transition-all duration-300 uppercase text-xs md:text-sm tracking-wider;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold font-montserrat relative pb-4 mb-8;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold font-montserrat relative pb-4 mb-8;
   }
   
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-20 h-1 bg-gold-500;
+    @apply absolute bottom-0 left-0 w-16 md:w-20 h-1 bg-gold-500;
   }
   
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Fix for dropdown menus */
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+/* Fix for mobile overflow issues */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .whitespace-nowrap {
+    white-space: normal;
   }
 }

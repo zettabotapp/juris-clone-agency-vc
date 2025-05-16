@@ -35,7 +35,8 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleTestimonials = 2; // Number of testimonials visible at once
+  // Show only 1 testimonial on mobile, 2 on larger screens
+  const visibleTestimonials = window.innerWidth < 768 ? 1 : 2;
   
   const nextTestimonial = () => {
     if (currentIndex + visibleTestimonials < testimonials.length) {
@@ -54,69 +55,69 @@ const TestimonialsSection = () => {
   };
   
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-12 md:py-16 bg-gray-50">
       <div className="container-custom">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="section-title inline-block mx-auto after:left-1/2 after:-translate-x-1/2">
             Opinião dos Clientes
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+          <p className="text-gray-600 max-w-3xl mx-auto px-4">
             Veja o que nossos clientes têm a dizer sobre a qualidade dos nossos serviços e atendimento.
           </p>
         </div>
         
-        <div className="relative">
+        <div className="relative px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials
               .slice(currentIndex, currentIndex + visibleTestimonials)
               .map((testimonial) => (
-                <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                <div key={testimonial.id} className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-gray-100">
                   <div className="flex items-center mb-4">
                     <img 
                       src={testimonial.photo} 
                       alt={testimonial.name} 
-                      className="w-14 h-14 rounded-full object-cover mr-4"
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover mr-3 md:mr-4"
                     />
                     <div>
-                      <h4 className="font-bold">{testimonial.name}</h4>
+                      <h4 className="font-bold text-sm md:text-base">{testimonial.name}</h4>
                       <div className="flex">
                         {[...Array(5)].map((_, i) => (
                           <Star 
                             key={i} 
-                            size={14} 
+                            size={12} 
                             className={i < testimonial.rating ? "text-gold-500 fill-gold-500" : "text-gray-300"} 
                           />
                         ))}
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 italic">"{testimonial.text}"</p>
+                  <p className="text-gray-600 italic text-xs md:text-sm">"{testimonial.text}"</p>
                 </div>
               ))}
           </div>
 
-          <div className="flex justify-center mt-8 space-x-4">
+          <div className="flex justify-center mt-6 md:mt-8 space-x-4">
             <button 
               onClick={prevTestimonial}
-              className="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition-colors"
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition-colors"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={18} />
             </button>
             <button 
               onClick={nextTestimonial}
-              className="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition-colors"
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition-colors"
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={18} />
             </button>
           </div>
         </div>
         
-        <div className="text-center mt-8">
+        <div className="text-center mt-6 md:mt-8">
           <a 
             href="https://g.page/r/YOUR_GOOGLE_REVIEW_ID" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-gold-600 font-semibold hover:text-gold-700"
+            className="text-gold-600 font-semibold hover:text-gold-700 text-sm md:text-base"
           >
             Ver mais avaliações no Google →
           </a>

@@ -12,12 +12,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
             <h2 className="section-title text-left">Quem Somos</h2>
-            <p className="mb-6 text-gray-700">
+            <p className="mb-4 md:mb-6 text-gray-700">
               VC Advogados é um escritório de advocacia especializado em soluções jurídicas 
               para pessoas físicas e jurídicas, atuante em diversas áreas do direito.
             </p>
@@ -43,12 +43,12 @@ const AboutSection = () => {
             </Link>
           </div>
           
-          <div className="relative">
+          <div className="relative mt-8 md:mt-0">
             <div className="absolute -inset-4 bg-gold-500 rounded-lg -z-10 opacity-20"></div>
             <img 
               src="/lovable-uploads/Vanessa.png" 
               alt="Sócia fundadora VC Advogados" 
-              className="rounded-lg shadow-xl w-3/4 h-auto mx-auto"
+              className="rounded-lg shadow-xl w-full md:w-3/4 h-auto mx-auto"
             />
             <div className="text-center mt-4">
               <h4 className="text-lg font-bold text-gray-900">Dra. Vanessa Vieira</h4>

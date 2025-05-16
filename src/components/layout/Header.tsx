@@ -23,14 +23,14 @@ const Header = () => {
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-darkbg shadow-lg' : 'bg-transparent'}`}>
-      <div className="container-custom py-4">
+      <div className="container-custom py-2 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
           <img
             src="/lovable-uploads/logo.png"
             alt="VC Advogados Logo"
-            className="h-24 w-auto" // aumentado de h-20 para h-24
+            className="h-16 md:h-24 w-auto" 
           />
           </Link>
 
@@ -88,7 +88,7 @@ const Header = () => {
       {isOpen && (
         <div className="lg:hidden bg-darkbg border-t border-gold-900">
           <div className="container-custom py-4">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-3">
               <MobileNavLink to="/" onClick={() => setIsOpen(false)}>Início</MobileNavLink>
               <MobileNavLink to="/quem-somos" onClick={() => setIsOpen(false)}>Quem Somos</MobileNavLink>
               <MobileNavLink to="/atuacao" onClick={() => setIsOpen(false)}>Atuação</MobileNavLink>

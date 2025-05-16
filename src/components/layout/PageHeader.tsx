@@ -19,21 +19,21 @@ const PageHeader: React.FC<PageHeaderProps> = ({
 }) => {
   return (
     <div 
-      className="relative py-24 bg-darkbg bg-cover bg-center" 
+      className="relative pt-24 pb-16 md:py-24 bg-darkbg bg-cover bg-center" 
       style={{ 
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${backgroundImage})` 
       }}
     >
-      <div className="container-custom text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{title}</h1>
+      <div className="container-custom text-center px-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{title}</h1>
         
         {breadcrumbs.length > 0 && (
           <nav className="flex justify-center">
-            <ol className="flex flex-wrap items-center">
+            <ol className="flex flex-wrap items-center justify-center">
               {breadcrumbs.map((crumb, index) => (
-                <li key={index} className="flex items-center">
+                <li key={index} className="flex items-center text-sm md:text-base">
                   {index > 0 && (
-                    <ChevronRight size={16} className="mx-2 text-gold-500" />
+                    <ChevronRight size={14} className="mx-1 md:mx-2 text-gold-500" />
                   )}
                   
                   {crumb.path ? (
