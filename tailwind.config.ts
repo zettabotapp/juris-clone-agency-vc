@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        gold: {
+          50: '#fff8e5',
+          100: '#ffefc3',
+          200: '#ffe49c',
+          300: '#ffd767',
+          400: '#ffc72e',
+          500: '#ffb300', // Main gold color
+          600: '#e09600',
+          700: '#bb7700',
+          800: '#996100',
+          900: '#805000',
+          950: '#402800',
+        },
+        darkbg: '#121212',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +99,32 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        },
+        'slide-in-right': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' }
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'slide-in-right': 'slide-in-right 0.5s ease-out',
+			},
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+        'opensans': ['Open Sans', 'sans-serif'],
+      },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
