@@ -46,10 +46,15 @@ const AboutSection = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-gold-500 rounded-lg -z-10 opacity-20"></div>
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmVtYWxlJTIwbGF3eWVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" 
+              src="/lovable-uploads/Vanessa.png" 
               alt="Sócia fundadora VC Advogados" 
-              className="rounded-lg shadow-xl w-full h-auto"
+              className="rounded-lg shadow-xl w-3/4 h-auto mx-auto"
             />
+            <div className="text-center mt-4">
+              <h4 className="text-lg font-bold text-gray-900">Dra. Vanessa Vieira</h4>
+              <p className="text-gray-700">Advogada</p>
+              <p className="text-gray-700">Sócia Fundadora</p>
+            </div>
           </div>
         </div>
       </div>

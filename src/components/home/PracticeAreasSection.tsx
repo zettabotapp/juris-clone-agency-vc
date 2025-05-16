@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { 
   Building, 
@@ -70,7 +69,10 @@ const PracticeAreasSection = () => {
         backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')"
       }}
     >
-      <div className="container-custom">
+      <div 
+        className="container-custom mx-auto" 
+        style={{ maxWidth: "110rem" }}
+      >
         <div className="text-center mb-16">
           <h2 className="section-title inline-block text-white mx-auto after:left-1/2 after:-translate-x-1/2">
             ATUAÇÃO
