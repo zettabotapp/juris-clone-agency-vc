@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '@/components/layout/PageHeader';
 import { 
-  BuildingBank, 
+  Building, 
   Home, 
   Users, 
   Scale, 
@@ -16,7 +16,7 @@ const PracticeAreasPage = () => {
   const areas = [
     {
       id: "direito-bancario",
-      icon: <BuildingBank size={48} className="text-gold-500 mb-4" />,
+      icon: <Building size={48} className="text-gold-500 mb-4" />,
       title: "Direito Bancário",
       description: "Assessoria em operações bancárias, contratos financeiros e defesa contra práticas abusivas.",
       services: [

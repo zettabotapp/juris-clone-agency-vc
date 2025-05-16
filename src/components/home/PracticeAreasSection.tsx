@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { 
-  BuildingBank, 
+  Building, 
   Home, 
   Users, 
   Scale, 
@@ -14,7 +14,7 @@ import {
 const PracticeAreasSection = () => {
   const areas = [
     {
-      icon: <BuildingBank size={40} className="text-gold-500" />,
+      icon: <Building size={40} className="text-gold-500" />,
       title: "Direito Bancário",
       description: "Assessoria em operações bancárias, contratos financeiros e defesa contra práticas abusivas.",
       items: ["Revisão contratual", "Ações revisionais", "Contestação de tarifas"]
