@@ -51,9 +51,9 @@ const Footer = () => {
                 <Mail size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <a
                   href="mailto:contato@vieiracamargoadvogados.com.br"
-                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm whitespace-nowrap"
+                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm break-words w-full"
                 >
-                  contato@vieiracamargoadvogados.com.br
+                  contato@vieiracamargo<wbr />advogados.com.br
                 </a>
               </li>
             </ul>
@@ -77,9 +77,9 @@ const Footer = () => {
                 <Mail size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <a
                   href="mailto:contato@vieiracamargoadvogados.com.br"
-                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm whitespace-nowrap"
+                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm break-words w-full"
                 >
-                  contato@vieiracamargoadvogados.com.br
+                  contato@vieiracamargo<wbr />advogados.com.br
                 </a>
               </li>
             </ul>
