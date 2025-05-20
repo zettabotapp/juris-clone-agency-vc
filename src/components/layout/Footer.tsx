@@ -14,10 +14,10 @@ const Footer = () => {
               Somos um escritório de advocacia especializado, que presta assessoria jurídica completa para clientes pessoas físicas e jurídicas.
             </p>
             <div className="flex space-x-3 md:space-x-4">
-              <SocialIcon href="#" icon={<Facebook size={16} />} />
-              <SocialIcon href="#" icon={<Instagram size={16} />} />
-              <SocialIcon href="#" icon={<Linkedin size={16} />} />
-              <SocialIcon href="#" icon={<Twitter size={16} />} />
+              <SocialIcon href="https://www.facebook.com/vieiracamargoadvogados#" icon={<Facebook size={16} />} />
+              <SocialIcon href="https://www.instagram.com/vieiracamargoadvogados/?igsh=MTJ5bDdyaWVnaHg0ag%3D%3D#" icon={<Instagram size={16} />} />
+              {/* <SocialIcon href="#" icon={<Linkedin size={16} />} />
+              <SocialIcon href="#" icon={<Twitter size={16} />} /> */}
             </div>
           </div>
 
@@ -36,20 +36,25 @@ const Footer = () => {
           {/* Contact Manaus */}
           <div>
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">Manaus/AM</h3>
-            <ul className="space-y-2 md:space-y-3">
-              <li className="flex">
+            <ul className="space-y-4 md:space-y-5">
+              <li className="flex items-start">
                 <MapPin size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <span className="text-gray-300 text-xs md:text-sm">
                   Rua Maria Mansour, 438, Manaus - AM, 69078-551
                 </span>
               </li>
-              <li className="flex">
-                <Phone size={16} className="mr-2 text-gold-500 shrink-0" />
-                <a href="tel:08000000000" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">0800 000 0000</a>
+              <li className="flex items-start">
+                <Phone size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
+                <a href="tel:08001119999" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">0800 111 9999</a>
               </li>
-              <li className="flex">
-                <Mail size={16} className="mr-2 text-gold-500 shrink-0" />
-                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">contato@vieiracamargoadvogados.com.br</a>
+              <li className="flex items-start">
+                <Mail size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
+                <a
+                  href="mailto:contato@vieiracamargoadvogados.com.br"
+                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm whitespace-nowrap"
+                >
+                  contato@vieiracamargoadvogados.com.br
+                </a>
               </li>
             </ul>
           </div>
@@ -57,20 +62,25 @@ const Footer = () => {
           {/* Contact Florianópolis */}
           <div>
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">Florianópolis/SC</h3>
-            <ul className="space-y-2 md:space-y-3">
-              <li className="flex">
+            <ul className="space-y-4 md:space-y-5">
+              <li className="flex items-start">
                 <MapPin size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <span className="text-gray-300 text-xs md:text-sm">
                   Avenida Hercílio Luz, 639 - Sala 1107, Edifício Alpha Centauri, Centro, Florianópolis - SC, 88020-000
                 </span>
               </li>
-              <li className="flex">
-                <Phone size={16} className="mr-2 text-gold-500 shrink-0" />
-                <a href="tel:08000000000" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">0800 000 0000</a>
+              <li className="flex items-start">
+                <Phone size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
+                <a href="tel:08001119999" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">0800 111 9999</a>
               </li>
-              <li className="flex">
-                <Mail size={16} className="mr-2 text-gold-500 shrink-0" />
-                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">contato@vieiracamargoadvogados.com.br</a>
+              <li className="flex items-start">
+                <Mail size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
+                <a
+                  href="mailto:contato@vieiracamargoadvogados.com.br"
+                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm whitespace-nowrap"
+                >
+                  contato@vieiracamargoadvogados.com.br
+                </a>
               </li>
             </ul>
           </div>

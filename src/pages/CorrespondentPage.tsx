@@ -99,8 +99,8 @@ const CorrespondentPage = () => {
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center">
                     <Phone size={18} className="text-gold-500 mr-3" />
-                    <a href="tel:08000000000" className="text-white hover:text-gold-500 transition-colors">
-                      0800 000 0000
+                    <a href="tel:08001119999" className="text-white hover:text-gold-500 transition-colors">
+                      0800 111 9999
                     </a>
                   </div>
                   <div className="flex items-center">

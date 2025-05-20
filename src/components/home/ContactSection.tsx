@@ -14,8 +14,8 @@ const ContactSection = () => {
           </p>
           <div className="mt-6 md:mt-8 inline-flex items-center">
             <Phone size={18} className="text-gold-500 mr-2" />
-            <a href="tel:08000000000" className="text-lg md:text-xl font-bold hover:text-gold-600 transition-colors">
-              0800 000 0000
+            <a href="tel:08001119999" className="text-lg md:text-xl font-bold hover:text-gold-600 transition-colors">
+              0800 111 9999
             </a>
           </div>
         </div>
@@ -34,8 +34,8 @@ const ContactSection = () => {
               </address>
               <div className="flex items-center mb-2 text-sm md:text-base">
                 <Phone size={16} className="text-gold-500 mr-2" />
-                <a href="tel:08000000000" className="text-gray-600 hover:text-gold-600 transition-colors">
-                  0800 000 0000
+                <a href="tel:08001119999" className="text-gray-600 hover:text-gold-600 transition-colors">
+                  0800 111 9999
                 </a>
               </div>
               <div className="flex items-center text-sm md:text-base">
@@ -69,8 +69,8 @@ const ContactSection = () => {
               </address>
               <div className="flex items-center mb-2 text-sm md:text-base">
                 <Phone size={16} className="text-gold-500 mr-2" />
-                <a href="tel:08000000000" className="text-gray-600 hover:text-gold-600 transition-colors">
-                  0800 000 0000
+                <a href="tel:08001119999" className="text-gray-600 hover:text-gold-600 transition-colors">
+                  0800 111 9999
                 </a>
               </div>
               <div className="flex items-center text-sm md:text-base">
