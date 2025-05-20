@@ -82,7 +82,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">E-mail</h3>
-                    <a href="mailto:contato@vcadvogados.com" className="text-gray-700 hover:text-gold-600 transition-colors block">contato@vcadvogados.com</a>
+                    <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-700 hover:text-gold-600 transition-colors block">contato@vieiracamargoadvogados.com.br</a>
                     <p className="text-gray-500 text-sm mt-1">Responderemos o mais breve possível</p>
                   </div>
                 </div>
@@ -95,9 +95,8 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-bold text-lg mb-2">Manaus/AM</h3>
                     <address className="not-italic text-gray-700">
-                      Av. Djalma Batista, 1661<br />
-                      Business Center Millennium, Sala 810<br />
-                      Chapada, Manaus - AM, 69050-010
+                      Rua Maria Mansour, 438<br />
+                      Japiim, Manaus - AM, 69078-551
                     </address>
                   </div>
                 </div>
@@ -110,9 +109,9 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-bold text-lg mb-2">Florianópolis/SC</h3>
                     <address className="not-italic text-gray-700">
-                      Av. Rio Branco, 380<br />
-                      Sala 902, Edifício Barra Sul<br />
-                      Centro, Florianópolis - SC, 88015-200
+                      Avenida Hercílio Luz, 639<br />
+                      Sala 1107, Edifício Alpha Centauri<br />
+                      Centro, Florianópolis - SC, 88020-000
                     </address>
                   </div>
                 </div>

@@ -29,9 +29,8 @@ const ContactSection = () => {
                 <h3 className="text-lg md:text-xl font-bold font-playfair">Manaus/AM</h3>
               </div>
               <address className="not-italic text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                Av. Djalma Batista, 1661 <br />
-                Business Center Millennium, Sala 810 <br />
-                Chapada, Manaus - AM, 69050-010
+                Rua Maria Mansour, 438 <br />
+                Japiim, Manaus - AM, 69078-551
               </address>
               <div className="flex items-center mb-2 text-sm md:text-base">
                 <Phone size={16} className="text-gold-500 mr-2" />
@@ -41,14 +40,14 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center text-sm md:text-base">
                 <Mail size={16} className="text-gold-500 mr-2" />
-                <a href="mailto:contato@vcadvogados.com" className="text-gray-600 hover:text-gold-600 transition-colors">
-                  contato@vcadvogados.com
+                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-600 hover:text-gold-600 transition-colors">
+                  contato@vieiracamargoadvogados.com.br
                 </a>
               </div>
             </div>
             <iframe 
               title="Localização VC Advogados Manaus"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7923555127564!2d-60.03379818474979!3d-3.1071536410281367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c057b9c593dbf%3A0x5bd37a8c2ebd8654!2sMillennium%20Shopping%20Center!5e0!3m2!1sen!2sbr!4v1626897354520!5m2!1sen!2sbr" 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7967.823263752814!2d-59.99056300000001!3d-3.118076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c0522d0db18a7%3A0xb8c5edaa7cd3e6ab!2sR.%20Maria%20Mansour%2C%20438%20-%20Japiim%2C%20Manaus%20-%20AM%2C%2069078-551!5e0!3m2!1spt-BR!2sbr!4v1747764041358!5m2!1spt-BR!2sbr" 
               className="w-full h-56 md:h-72" 
               style={{ border: 0 }} 
               allowFullScreen={true}
@@ -64,9 +63,9 @@ const ContactSection = () => {
                 <h3 className="text-lg md:text-xl font-bold font-playfair">Florianópolis/SC</h3>
               </div>
               <address className="not-italic text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                Av. Rio Branco, 380 <br />
-                Sala 902, Edifício Barra Sul <br />
-                Centro, Florianópolis - SC, 88015-200
+                Avenida Hercílio Luz, 639 <br />
+                Sala 1107, Edifício Alpha Centauri <br />
+                Centro, Florianópolis - SC, 88020-000
               </address>
               <div className="flex items-center mb-2 text-sm md:text-base">
                 <Phone size={16} className="text-gold-500 mr-2" />
@@ -76,14 +75,14 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center text-sm md:text-base">
                 <Mail size={16} className="text-gold-500 mr-2" />
-                <a href="mailto:contato@vcadvogados.com" className="text-gray-600 hover:text-gold-600 transition-colors">
-                  contato@vcadvogados.com
+                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-600 hover:text-gold-600 transition-colors">
+                  contato@vieiracamargoadvogados.com.br
                 </a>
               </div>
             </div>
             <iframe 
               title="Localização VC Advogados Florianópolis"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.979359162783!2d-48.55274048499805!3d-27.59661098283544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527390534e0d601%3A0x92dd1a1a285ff0bf!2sAv.%20Rio%20Branco%2C%20380%20-%20Centro%2C%20Florian%C3%B3polis%20-%20SC%2C%2088015-200!5e0!3m2!1sen!2sbr!4v1626897392520!5m2!1sen!2sbr" 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7071.748112588271!2d-48.547997!3d-27.597434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527383ad9a1e201%3A0xb9fb923d51da1e2d!2sAv.%20Herc%C3%ADlio%20Luz%2C%20639%20-%20Centro%2C%20Florian%C3%B3polis%20-%20SC%2C%2088020-000!5e0!3m2!1spt-BR!2sbr!4v1747764162273!5m2!1spt-BR!2sbr" 
               className="w-full h-56 md:h-72" 
               style={{ border: 0 }} 
               allowFullScreen={true}

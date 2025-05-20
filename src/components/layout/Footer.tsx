@@ -40,7 +40,7 @@ const Footer = () => {
               <li className="flex">
                 <MapPin size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <span className="text-gray-300 text-xs md:text-sm">
-                  Av. Djalma Batista, 1661 - Business Center Millennium, Sala 810, Chapada, Manaus - AM, 69050-010
+                  Rua Maria Mansour, 438, Manaus - AM, 69078-551
                 </span>
               </li>
               <li className="flex">
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li className="flex">
                 <Mail size={16} className="mr-2 text-gold-500 shrink-0" />
-                <a href="mailto:contato@vcadvogados.com" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">contato@vcadvogados.com</a>
+                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">contato@vieiracamargoadvogados.com.br</a>
               </li>
             </ul>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li className="flex">
                 <MapPin size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <span className="text-gray-300 text-xs md:text-sm">
-                  Av. Rio Branco, 380 - Sala 902, Edifício Barra Sul, Centro, Florianópolis - SC, 88015-200
+                  Avenida Hercílio Luz, 639 - Sala 1107, Edifício Alpha Centauri, Centro, Florianópolis - SC, 88020-000
                 </span>
               </li>
               <li className="flex">
@@ -70,7 +70,7 @@ const Footer = () => {
               </li>
               <li className="flex">
                 <Mail size={16} className="mr-2 text-gold-500 shrink-0" />
-                <a href="mailto:contato@vcadvogados.com" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">contato@vcadvogados.com</a>
+                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">contato@vieiracamargoadvogados.com.br</a>
               </li>
             </ul>
           </div>

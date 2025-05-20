@@ -49,7 +49,12 @@ const Header = () => {
               >
                 Clientes <ChevronDown size={16} className="ml-1" />
               </button>
-              <div className="absolute left-0 mt-2 w-72 bg-darkbg border border-gold-800 rounded-md shadow-lg py-1 hidden group-hover:block">
+              <div 
+                className="absolute left-0 mt-2 w-72 bg-darkbg border border-gold-800 rounded-md shadow-lg py-1 hidden group-hover:block"
+                onMouseLeave={() => setClientsDropdown(false)}
+                style={{ marginTop: "0.5rem" }}
+              >
+                <div className="absolute w-full h-4 -top-4 bg-transparent"></div>
                 <Link to="/clientes/pessoa-fisica-ou-juridica" className="block px-4 py-2 text-sm text-white hover:bg-gold-900 hover:text-gold-500">
                   Pessoa Física Ou Jurídica
                 </Link>
@@ -102,7 +107,7 @@ const Header = () => {
                   Clientes <ChevronDown size={16} className={`ml-1 transition-transform ${clientsDropdown ? 'rotate-180' : ''}`} />
                 </button>
                 {clientsDropdown && (
-                  <div className="pl-4 mt-2 border-l border-gold-800 space-y-2">
+                  <div className="pl-4 mt-2 border-l border-gold-800 flex flex-col space-y-2">
                     <MobileNavLink to="/clientes/pessoa-fisica-ou-juridica" onClick={() => setIsOpen(false)}>
                       Pessoa Física Ou Jurídica
                     </MobileNavLink>
