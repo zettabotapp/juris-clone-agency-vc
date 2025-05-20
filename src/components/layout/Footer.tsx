@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer className="bg-darkbg text-white">
       <div className="container-custom py-8 md:py-12 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
           {/* About */}
-          <div>
+          <div className="md:col-span-1">
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">VC Advogados</h3>
             <p className="mb-4 text-xs md:text-sm text-gray-300">
               Somos um escritório de advocacia especializado, que presta assessoria jurídica completa para clientes pessoas físicas e jurídicas.
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="md:col-span-1">
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">Acesso Rápido</h3>
             <ul className="space-y-2 md:space-y-3 text-xs md:text-sm">
               <FooterLink to="/">Início</FooterLink>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Manaus */}
-          <div>
+          <div className="md:col-span-1">
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">Manaus/AM</h3>
             <ul className="space-y-4 md:space-y-5">
               <li className="flex items-start">
@@ -47,11 +47,11 @@ const Footer = () => {
                 <Phone size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <a href="tel:08001119999" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">0800 111 9999</a>
               </li>
-              <li className="flex items-start">
+              <li className="flex">
                 <Mail size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <a
                   href="mailto:contato@vieiracamargoadvogados.com.br"
-                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm text-ellipsis overflow-hidden"
+                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm truncate max-w-[180px] md:max-w-[220px]"
                 >
                   contato@vieiracamargoadvogados.com.br
                 </a>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Florianópolis */}
-          <div>
+          <div className="lg:col-span-1 md:col-span-3">
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">Florianópolis/SC</h3>
             <ul className="space-y-4 md:space-y-5">
               <li className="flex items-start">
@@ -73,11 +73,11 @@ const Footer = () => {
                 <Phone size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <a href="tel:08001119999" className="text-gray-300 hover:text-gold-500 text-xs md:text-sm">0800 111 9999</a>
               </li>
-              <li className="flex items-start">
+              <li className="flex">
                 <Mail size={16} className="mr-2 text-gold-500 shrink-0 mt-1" />
                 <a
                   href="mailto:contato@vieiracamargoadvogados.com.br"
-                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm text-ellipsis overflow-hidden"
+                  className="text-gray-300 hover:text-gold-500 text-xs md:text-sm truncate max-w-[180px] md:max-w-full"
                 >
                   contato@vieiracamargoadvogados.com.br
                 </a>
