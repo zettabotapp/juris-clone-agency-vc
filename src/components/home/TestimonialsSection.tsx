@@ -1,23 +1,8 @@
 
-import { useEffect, useState, CSSProperties } from 'react';
-import { Button } from '@/components/ui/button';
+import { useEffect } from 'react';
 
 const TestimonialsSection = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    const handleResize = () => {
-      setWindowHeight(window.innerHeight);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-    
     // Carregar dinamicamente o script do Elfsight
     const style = document.createElement('style');
     const script = document.createElement('script');
@@ -28,63 +13,75 @@ const TestimonialsSection = () => {
       /* Container para o widget e botão */
       .reviews-container {
         position: relative !important;
-        padding-bottom: 40px !important;
       }
 
-      /* Posicionar o botão */
-      .review-button {
+      /* Posicionar o botão sobre o badge */
+      .review-button-overlay {
+        position: absolute !important;
+        bottom: -20px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 100000 !important;
+        background: #3B82F6 !important;
+        padding: 8px 16px !important;
+        border-radius: 4px !important;
+        color: white !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        transition: background-color 0.2s !important;
+      }
+
+      /* Posicionar o botão sobre o badge */
+      .review-button-overlay {
         position: absolute !important;
         bottom: 0px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
-        z-index: 10 !important;
+        z-index: 100000 !important;
+        background: #3B82F6 !important;
+        padding: 8px 16px !important;
+        border-radius: 4px !important;
+        color: white !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        transition: background-color 0.2s !important;
         margin-bottom: 8px !important;
-        white-space: nowrap !important; /* Evitar quebra de linha */
-        font-size: 14px !important;
+        /* Adicionando margens laterais brancas */
+        box-shadow: 0 0 0 13px #f9fafb !important;
+        /* Opcional: adicionar um leve sombreamento para destacar */
+        font-size: 14px !important; /* Tamanho base para mobile */
       }
 
-      /* Div de fundo branco ao redor do botão */
-      .button-background {
-        position: absolute !important;
-        bottom: 0px !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 5 !important;
-        background: #f9fafb !important;
-        height: 40px !important;
+      /* Aumentar o tamanho do texto em telas maiores */
+      @media (min-width: 768px) {
+        .review-button-overlay {
+          font-size: 16px !important;
+        }
+      }
+
+      /* Aumentar o tamanho do texto em telas maiores */
+      @media (min-width: 768px) {
+        .review-button-overlay {
+          font-size: 16px !important;
+        }
       }
 
       /* Ocultar badge do widget gratuito */
-      a[href*="elfsight.com"],
       a[href*="elfsight.com"][style*="display:inline-flex"],
       a[href*="elfsight.com"][style*="background-color:rgba(238,238,238,0.9)"],
-      div[style*="background-color:rgba(238,238,238,0.9)"],
-      div[style*="background:rgba(238,238,238,0.9)"],
-      div[style*="background: rgba(238,238,238,0.9)"],
       .eapps-google-reviews-slider-header,
       .eapps-google-reviews-slider-header-reviews-count,
-      div[style*="margin:8px auto"],
-      div[style*="width:100%;text-align:right;font-family:Roboto,sans-serif;font-size:13px"],
-      div[style*="width: 100%; text-align: right; font-family: Roboto, sans-serif; font-size: 13px"],
-      div[class*="eapps-widget-toolbar"],
-      div[data-id="widgetNotice"],
-      div[class*="eapps-remove"],
-      div[style*="position: relative; text-align: right; height: 14px; display: block; z-index: 9999; margin: 0px auto; font-family: Roboto, Arial, Sans-serif;"],
-      div[style*="color: rgb(110, 110, 110)"],
-      div[style*="font-size: 13px"] {
+      div[style*="margin:8px auto"] {
         visibility: hidden !important;
         opacity: 0 !important;
         height: 0 !important;
-        pointer-events: none !important;
-        position: absolute !important;
-        display: none !important;
       }
 
       /* Ajustar margens do container principal */
       .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de {
         margin: 0 !important;
         padding: 0 !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 40px !important;
       }
 
       /* Garantir que as avaliações fiquem visíveis */
@@ -101,17 +98,8 @@ const TestimonialsSection = () => {
       // Limpeza ao desmontar o componente
       document.body.removeChild(script);
       document.head.removeChild(style);
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  // Calcular quando o botão deve ficar invisível (quando chegar perto do cabeçalho)
-  const buttonStyle: CSSProperties = {
-    opacity: scrollPosition > windowHeight - 150 ? 0 : 1,
-    visibility: scrollPosition > windowHeight - 150 ? 'hidden' as const : 'visible' as const,
-    transition: 'opacity 0.3s, visibility 0.3s'
-  };
 
   return (
     <section className="py-12 md:py-16 bg-gray-50">
@@ -131,22 +119,14 @@ const TestimonialsSection = () => {
             data-elfsight-app-lazy
           ></div>
           
-          <div className="button-background" style={buttonStyle}></div>
-          
-          <Button
-            variant="default"
-            className="review-button"
-            style={buttonStyle}
-            asChild
+          <a
+            href="https://www.google.com/maps/place/VC+Advogados/@-27.5974017,-48.5479982,17z/data=!3m1!4b1!4m6!3m5!1s0x926c05b2515aaeaf:0xb76311c8917b8177!8m2!3d-27.5974017!4d-48.5479982!16s%2Fg%2F11swbvswj2?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="review-button-overlay"
           >
-            <a
-              href="https://www.google.com/maps/place/VC+Advogados/@-27.5974017,-48.5479982,17z/data=!3m1!4b1!4m6!3m5!1s0x926c05b2515aaeaf:0xb76311c8917b8177!8m2!3d-27.5974017!4d-48.5479982!16s%2Fg%2F11swbvswj2?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Escreva sua avaliação
-            </a>
-          </Button>
+            Escreva sua avaliação
+          </a>
         </div>
       </div>
     </section>
