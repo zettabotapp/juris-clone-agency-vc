@@ -1,42 +1,58 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 const testimonials = [
   {
     id: 1,
-    name: "Ronnevy Dantas",
-    photo: "https://randomuser.me/api/portraits/men/44.jpg",
+    name: "Silvio Gaia",
+    photo: "https://randomuser.me/api/portraits/men/45.jpg",
     rating: 5,
-    text: "Excelente escritório de advocacia! Superaram todas as minhas expectativas. O atendimento é personalizado e extremamente profissional. Me senti totalmente amparado durante todo o processo."
+    text: "Competência e eficiência ⚖️",
+    date: "06/10/2023"
   },
   {
     id: 2,
-    name: "Eutimar Teixeira",
+    name: "Gabriel Freire",
     photo: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
-    text: "Excelente atendimento. Equipe bem preparada e competente. Recomendo."
+    text: "Atendimento excelente!",
+    date: "27/09/2023"
   },
   {
     id: 3,
-    name: "Bernardo Fonseca",
-    photo: "https://randomuser.me/api/portraits/men/68.jpg",
+    name: "Lary TMeborach",
+    photo: "https://randomuser.me/api/portraits/women/68.jpg",
     rating: 5,
-    text: "Muito prestativo e eficiente. Agradeço a todos que nos ajudaram."
+    text: "Ótima experiência!",
+    date: "25/08/2023"
   },
   {
     id: 4,
     name: "Silvio Rocha",
     photo: "https://randomuser.me/api/portraits/men/76.jpg",
     rating: 5,
-    text: "Excelente escritório de advocacia. Profissionais altamente qualificados. Recomendo!"
+    text: "Excelente escritório de advocacia. Profissionais altamente qualificados. Recomendo!",
+    date: "15/07/2023"
   }
 ];
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // Show only 1 testimonial on mobile, 2 on larger screens
-  const visibleTestimonials = window.innerWidth < 768 ? 1 : 2;
+  const [visibleTestimonials, setVisibleTestimonials] = useState(2);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleTestimonials(window.innerWidth < 768 ? 1 : 2);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   
   const nextTestimonial = () => {
     if (currentIndex + visibleTestimonials < testimonials.length) {
@@ -79,7 +95,10 @@ const TestimonialsSection = () => {
                       className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover mr-3 md:mr-4"
                     />
                     <div>
-                      <h4 className="font-bold text-sm md:text-base">{testimonial.name}</h4>
+                      <div className="flex justify-between items-center w-full">
+                        <h4 className="font-bold text-sm md:text-base">{testimonial.name}</h4>
+                        <span className="text-xs text-gray-500">{testimonial.date}</span>
+                      </div>
                       <div className="flex">
                         {[...Array(5)].map((_, i) => (
                           <Star 
@@ -91,7 +110,7 @@ const TestimonialsSection = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 italic text-xs md:text-sm">"{testimonial.text}"</p>
+                  <p className="text-gray-600 italic text-xs md:text-sm">{testimonial.text}</p>
                 </div>
               ))}
           </div>
