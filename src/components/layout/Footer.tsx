@@ -1,7 +1,9 @@
 
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter, MapPin, Phone, Mail, MessageSquare } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   // Mensagem pré-definida para o WhatsApp
@@ -111,36 +113,67 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* WhatsApp Float Button - Novo estilo */}
-      <a 
-        href={getWhatsAppLink()}
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="fixed bottom-4 md:bottom-6 right-4 md:right-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow z-50 flex items-center p-3 w-auto max-w-[280px]"
-        onClick={(e) => {
-          // Para dispositivos desktop, podemos usar o evento de clique para garantir que abra no web.whatsapp
-          if (!isMobile()) {
-            e.preventDefault();
-            window.open(whatsappLink, '_blank');
-          }
-        }}
-      >
-        <div className="mr-3 flex-shrink-0">
-          <Avatar className="h-10 w-10 border-2 border-green-500">
-            <AvatarImage src="/lovable-uploads/logo.png" alt="VC Advogados" />
-            <AvatarFallback className="bg-green-500 text-white">VC</AvatarFallback>
-          </Avatar>
-        </div>
-        <div className="flex flex-col text-left">
-          <span className="text-sm font-medium text-gray-600">Advogados Especialistas</span>
-          <span className="text-md font-bold text-gray-800">VC Advogados</span>
-        </div>
-        <div className="ml-3 bg-green-500 rounded-full p-1.5 flex-shrink-0">
-          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-          </svg>
-        </div>
-      </a>
+      {/* WhatsApp Float Button with Dialog */}
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button 
+            variant="outline" 
+            className="fixed bottom-4 md:bottom-6 right-4 md:right-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow z-50 flex items-center p-3 w-auto max-w-[280px] h-auto"
+          >
+            <div className="mr-3 flex-shrink-0">
+              <Avatar className="h-10 w-10 border-2 border-green-500">
+                <AvatarImage src="/lovable-uploads/logo.png" alt="VC Advogados" />
+                <AvatarFallback className="bg-green-500 text-white">VC</AvatarFallback>
+              </Avatar>
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="text-sm font-medium text-gray-600">Fale Conosco</span>
+              <span className="text-md font-bold text-gray-800">WhatsApp</span>
+            </div>
+            <div className="ml-3 bg-green-500 rounded-full p-1.5 flex-shrink-0">
+              <MessageSquare className="w-4 h-4 text-white" />
+            </div>
+          </Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle className="text-center">Fale com nossos Advogados</DialogTitle>
+            <DialogDescription className="text-center">
+              Clique no botão abaixo para conversar via WhatsApp
+            </DialogDescription>
+          </DialogHeader>
+          <div className="py-4">
+            <a 
+              href={getWhatsAppLink()}
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-white rounded-lg border border-gray-200 hover:border-green-500 transition-colors flex items-center p-4 w-full"
+              onClick={(e) => {
+                if (!isMobile()) {
+                  e.preventDefault();
+                  window.open(whatsappLink, '_blank');
+                }
+              }}
+            >
+              <div className="mr-3 flex-shrink-0">
+                <Avatar className="h-12 w-12 border-2 border-green-500">
+                  <AvatarImage src="/lovable-uploads/logo.png" alt="VC Advogados" />
+                  <AvatarFallback className="bg-green-500 text-white">VC</AvatarFallback>
+                </Avatar>
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-sm font-medium text-gray-600">Advogados Especialistas</span>
+                <span className="text-md font-bold text-gray-800">VC Advogados</span>
+              </div>
+              <div className="ml-auto bg-green-500 rounded-full p-2 flex-shrink-0">
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </DialogContent>
+      </Dialog>
     </footer>
   );
 };
