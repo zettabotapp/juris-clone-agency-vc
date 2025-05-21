@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, CSSProperties } from 'react';
 
 const TestimonialsSection = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -113,10 +113,10 @@ const TestimonialsSection = () => {
   }, []);
 
   // Calcular quando o botão deve ficar invisível (quando chegar perto do cabeçalho)
-  const buttonStyle = {
+  const buttonStyle: CSSProperties = {
     opacity: scrollPosition > window.innerHeight - 100 ? 0 : 1,
-    visibility: scrollPosition > window.innerHeight - 100 ? 'hidden' : 'visible',
-    transition: 'opacity 0.3s, visibility 0.3s',
+    visibility: scrollPosition > window.innerHeight - 100 ? 'hidden' as const : 'visible' as const,
+    transition: 'opacity 0.3s, visibility 0.3s'
   };
 
   return (
