@@ -1,10 +1,9 @@
-
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactSection = () => {
   return (
     <section className="py-12 md:py-16 bg-gray-100">
-      <div className="container-custom px-4">
+      <div className="max-w-[92rem] mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="section-title inline-block mx-auto after:left-1/2 after:-translate-x-1/2">
             Contato
