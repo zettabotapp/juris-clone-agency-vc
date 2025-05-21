@@ -5,31 +5,31 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: "Maria Silva",
-    photo: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Ronnevy Dantas",
+    photo: "https://randomuser.me/api/portraits/men/44.jpg",
     rating: 5,
-    text: "Excelente atendimento! O escritório me ajudou na resolução de uma questão familiar complexa com total profissionalismo e sensibilidade. Recomendo com certeza!"
+    text: "Excelente escritório de advocacia! Superaram todas as minhas expectativas. O atendimento é personalizado e extremamente profissional. Me senti totalmente amparado durante todo o processo."
   },
   {
     id: 2,
-    name: "João Oliveira",
+    name: "Eutimar Teixeira",
     photo: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
-    text: "Minha experiência com o escritório VC Advogados foi excelente. Profissionais comprometidos que realmente se importam com os clientes e seus casos."
+    text: "Excelente atendimento. Equipe bem preparada e competente. Recomendo."
   },
   {
     id: 3,
-    name: "Ana Costa",
-    photo: "https://randomuser.me/api/portraits/women/68.jpg",
-    rating: 4,
-    text: "Assessoria jurídica completa e de alta qualidade. Conseguiram resolver meu caso tributário de forma rápida e eficiente. Obrigada pelo suporte!"
+    name: "Bernardo Fonseca",
+    photo: "https://randomuser.me/api/portraits/men/68.jpg",
+    rating: 5,
+    text: "Muito prestativo e eficiente. Agradeço a todos que nos ajudaram."
   },
   {
     id: 4,
-    name: "Carlos Mendes",
+    name: "Silvio Rocha",
     photo: "https://randomuser.me/api/portraits/men/76.jpg",
     rating: 5,
-    text: "Profissionais altamente capacitados e atenciosos. Comunicação clara e objetiva durante todo o processo. Meu caso trabalhista foi resolvido melhor do que eu esperava."
+    text: "Excelente escritório de advocacia. Profissionais altamente qualificados. Recomendo!"
   }
 ];
 
@@ -114,7 +114,7 @@ const TestimonialsSection = () => {
         
         <div className="text-center mt-6 md:mt-8">
           <a 
-            href="https://g.page/r/YOUR_GOOGLE_REVIEW_ID" 
+            href="https://www.google.com/maps/place/VC+Advogados/@-27.5974017,-48.5479982,17z/data=!3m1!4b1!4m6!3m5!1s0x926c05b2515aaeaf:0xb76311c8917b8177!8m2!3d-27.5974017!4d-48.5479982!16s%2Fg%2F11swbvswj2?entry=ttu" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gold-600 font-semibold hover:text-gold-700 text-sm md:text-base"
