@@ -95,7 +95,7 @@ const Footer = () => {
 
       {/* WhatsApp Float Button */}
       <a 
-        href="https://wa.me/5508001119999" 
+        href="https://web.whatsapp.com/send?phone=5508001119999&text=Olá. Vim do seu site e gostaria de mais informações, pode me ajudar?" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="fixed bottom-4 md:bottom-6 right-4 md:right-6 bg-green-600 p-2 md:p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50"
