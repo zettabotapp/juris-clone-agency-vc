@@ -1,6 +1,23 @@
+
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactSection = () => {
+  // Mensagem pré-definida para o WhatsApp
+  const whatsappMessage = "Olá. Vim do seu site e gostaria de mais informações, pode me ajudar?";
+  const whatsappNumber = "5508001119999";
+  const whatsappLink = `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappMobileLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  // Verifica se está em dispositivo móvel
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
+  // Link do WhatsApp baseado no dispositivo
+  const getWhatsAppLink = () => {
+    return isMobile() ? whatsappMobileLink : whatsappLink;
+  };
+
   return (
     <section className="py-12 md:py-16 bg-gray-100">
       <div className="max-w-[92rem] mx-auto px-4">
