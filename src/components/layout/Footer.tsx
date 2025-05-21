@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-darkbg text-white">
       <div className="container-custom py-8 md:py-12 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
           {/* About */}
           <div className="md:col-span-3">
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">VC Advogados</h3>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Florianópolis */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 md:col-start-9">
             <h3 className="text-lg md:text-xl font-playfair font-bold text-gold-500 mb-4 md:mb-6">Florianópolis/SC</h3>
             <ul className="space-y-4 md:space-y-5">
               <li className="flex items-start">

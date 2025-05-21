@@ -20,7 +20,7 @@ const ContactSection = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
           {/* Manaus Office */}
           <div className="rounded-lg overflow-hidden shadow-md bg-white">
             <div className="p-4 md:p-6">
