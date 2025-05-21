@@ -15,6 +15,10 @@ import PracticeAreasPage from "./pages/PracticeAreasPage";
 import CorrespondentPage from "./pages/CorrespondentPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import ClientesPage from "./pages/ClientesPage";
+import PessoaFisicaJuridicaForm from "./pages/forms/PessoaFisicaJuridicaForm";
+import ReuniaoFamiliarForm from "./pages/forms/ReuniaoFamiliarForm";
+import VistoHumanitarioForm from "./pages/forms/VistoHumanitarioForm";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +35,10 @@ const App = () => (
             <Route path="/atuacao" element={<PracticeAreasPage />} />
             <Route path="/correspondente-juridico" element={<CorrespondentPage />} />
             <Route path="/contato" element={<ContactPage />} />
+            <Route path="/clientes" element={<ClientesPage />} />
+            <Route path="/clientes/pessoa-fisica-ou-juridica" element={<PessoaFisicaJuridicaForm />} />
+            <Route path="/clientes/imigrantes-haiti-reuniao-familiar" element={<ReuniaoFamiliarForm />} />
+            <Route path="/clientes/imigrantes-haiti-visto-humanitario" element={<VistoHumanitarioForm />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
