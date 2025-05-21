@@ -40,7 +40,7 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center text-sm md:text-base">
                 <Mail size={16} className="text-gold-500 mr-2 flex-shrink-0" />
-                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-600 hover:text-gold-600 transition-colors truncate max-w-[220px] sm:max-w-[280px]">
+                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-600 hover:text-gold-600 transition-colors">
                   contato@vieiracamargoadvogados.com.br
                 </a>
               </div>
@@ -75,7 +75,7 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center text-sm md:text-base">
                 <Mail size={16} className="text-gold-500 mr-2 flex-shrink-0" />
-                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-600 hover:text-gold-600 transition-colors truncate max-w-[220px] sm:max-w-[280px]">
+                <a href="mailto:contato@vieiracamargoadvogados.com.br" className="text-gray-600 hover:text-gold-600 transition-colors">
                   contato@vieiracamargoadvogados.com.br
                 </a>
               </div>
