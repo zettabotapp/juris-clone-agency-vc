@@ -4,33 +4,96 @@ import { useEffect } from 'react';
 const TestimonialsSection = () => {
   useEffect(() => {
     // Carregar dinamicamente o script do Elfsight
-    const script = document.createElement('script');
-    script.src = "https://static.elfsight.com/platform/platform.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Adicionar CSS para esconder a mensagem de widget grátis
     const style = document.createElement('style');
+    const script = document.createElement('script');
+    script.src = 'https://apps.elfsight.com/p/platform.js';
+    script.defer = true;
+    document.body.appendChild(script);
     style.textContent = `
-      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-google-reviews-slider-header-container,
-      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de a[href*="elfsight.com"],
-      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-google-reviews-slider-popup-widget-header,
-      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-google-reviews-page-navigation-dots,
-      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-widget-toolbar,
-      [class*="free-google-reviews-widget"],
-      [data-text*="Free Google Reviews widget"],
-      [class*="eapps-widget"] [class*="-bottom"] {
-        display: none !important;
+      /* Container para o widget e botão */
+      .reviews-container {
+        position: relative !important;
+      }
+
+      /* Posicionar o botão sobre o badge */
+      .review-button-overlay {
+        position: absolute !important;
+        bottom: -20px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 100000 !important;
+        background: #3B82F6 !important;
+        padding: 8px 16px !important;
+        border-radius: 4px !important;
+        color: white !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        transition: background-color 0.2s !important;
+      }
+
+      /* Posicionar o botão sobre o badge */
+      .review-button-overlay {
+        position: absolute !important;
+        bottom: 0px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 100000 !important;
+        background: #3B82F6 !important;
+        padding: 8px 16px !important;
+        border-radius: 4px !important;
+        color: white !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        transition: background-color 0.2s !important;
+        margin-bottom: 8px !important;
+        /* Adicionando margens laterais brancas */
+        box-shadow: 0 0 0 13px #f9fafb !important;
+        /* Opcional: adicionar um leve sombreamento para destacar */
+        font-size: 14px !important; /* Tamanho base para mobile */
+      }
+
+      /* Aumentar o tamanho do texto em telas maiores */
+      @media (min-width: 768px) {
+        .review-button-overlay {
+          font-size: 16px !important;
+        }
+      }
+
+      /* Aumentar o tamanho do texto em telas maiores */
+      @media (min-width: 768px) {
+        .review-button-overlay {
+          font-size: 16px !important;
+        }
+      }
+
+      /* Ocultar badge do widget gratuito */
+      a[href*="elfsight.com"][style*="display:inline-flex"],
+      a[href*="elfsight.com"][style*="background-color:rgba(238,238,238,0.9)"],
+      .eapps-google-reviews-slider-header,
+      .eapps-google-reviews-slider-header-reviews-count,
+      div[style*="margin:8px auto"] {
         visibility: hidden !important;
         opacity: 0 !important;
         height: 0 !important;
-        padding: 0 !important;
+      }
+
+      /* Ajustar margens do container principal */
+      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de {
         margin: 0 !important;
-        overflow: hidden !important;
+        padding: 0 !important;
+        margin-bottom: 40px !important;
+      }
+
+      /* Garantir que as avaliações fiquem visíveis */
+      .eapps-google-reviews-slider-items,
+      .eapps-google-reviews-slider-item {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
       }
     `;
     document.head.appendChild(style);
-
+  
     return () => {
       // Limpeza ao desmontar o componente
       document.body.removeChild(script);
@@ -50,15 +113,17 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Widget do Elfsight para Google Reviews */}
-        <div className="elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de" data-elfsight-app-lazy></div>
-
-        <div className="text-center mt-6 md:mt-8">
+        <div className="reviews-container">
+          <div 
+            className="elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de" 
+            data-elfsight-app-lazy
+          ></div>
+          
           <a
             href="https://www.google.com/maps/place/VC+Advogados/@-27.5974017,-48.5479982,17z/data=!3m1!4b1!4m6!3m5!1s0x926c05b2515aaeaf:0xb76311c8917b8177!8m2!3d-27.5974017!4d-48.5479982!16s%2Fg%2F11swbvswj2?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+            className="review-button-overlay"
           >
             Escreva sua avaliação
           </a>
