@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -92,161 +91,20 @@ const PessoaFisicaJuridicaForm = () => {
       
       <ClientCarousel />
       
-      <div className="container-custom py-12">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">PESSOA FÍSICA OU JURÍDICA</h2>
-          
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <div className="space-y-4">
-                <FormField
-                  control={form.control}
-                  name="nomeCompleto"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Nome Completo (Representante Legal)</FormLabel>
-                      <FormControl>
-                        <Input {...field} className="border-gold-300 focus:border-gold-500" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="estadoCivil"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Estado Civil</FormLabel>
-                      <FormControl>
-                        <Input {...field} className="border-gold-300 focus:border-gold-500" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="cpf"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>CPF</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field} 
-                          value={maskCPF(field.value)}
-                          onChange={(e) => field.onChange(e.target.value)}
-                          maxLength={14}
-                          className="border-gold-300 focus:border-gold-500"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="endereco"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Endereço Completo</FormLabel>
-                      <FormControl>
-                        <Input {...field} className="border-gold-300 focus:border-gold-500" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gray-100 py-12">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">PESSOA FÍSICA OU JURÍDICA</h2>
+            
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="space-y-4">
                   <FormField
                     control={form.control}
-                    name="cep"
+                    name="nomeCompleto"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>CEP</FormLabel>
-                        <FormControl>
-                          <Input 
-                            {...field} 
-                            value={maskCEP(field.value)}
-                            onChange={(e) => field.onChange(e.target.value)}
-                            maxLength={9}
-                            className="border-gold-300 focus:border-gold-500"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="cidade"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Cidade</FormLabel>
-                        <FormControl>
-                          <Input {...field} className="border-gold-300 focus:border-gold-500" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <FormField
-                    control={form.control}
-                    name="telefone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Telefone</FormLabel>
-                        <FormControl>
-                          <Input 
-                            {...field} 
-                            value={maskPhone(field.value)}
-                            onChange={(e) => field.onChange(e.target.value)}
-                            maxLength={15}
-                            className="border-gold-300 focus:border-gold-500"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>E-Mail</FormLabel>
-                        <FormControl>
-                          <Input 
-                            {...field} 
-                            type="email"
-                            className="border-gold-300 focus:border-gold-500" 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                
-                {/* Empresa */}
-                <div className="pt-4 border-t border-gray-200">
-                  <h3 className="text-lg font-semibold mb-4">Dados da Empresa (Opcional)</h3>
-                  
-                  <FormField
-                    control={form.control}
-                    name="nomeEmpresa"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Nome Da Empresa</FormLabel>
+                        <FormLabel>Nome Completo (Representante Legal)</FormLabel>
                         <FormControl>
                           <Input {...field} className="border-gold-300 focus:border-gold-500" />
                         </FormControl>
@@ -257,18 +115,46 @@ const PessoaFisicaJuridicaForm = () => {
                   
                   <FormField
                     control={form.control}
-                    name="cnpj"
+                    name="estadoCivil"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>CNPJ</FormLabel>
+                        <FormLabel>Estado Civil</FormLabel>
+                        <FormControl>
+                          <Input {...field} className="border-gold-300 focus:border-gold-500" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="cpf"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>CPF</FormLabel>
                         <FormControl>
                           <Input 
                             {...field} 
-                            value={field.value ? maskCNPJ(field.value) : ''}
+                            value={maskCPF(field.value)}
                             onChange={(e) => field.onChange(e.target.value)}
-                            maxLength={18}
+                            maxLength={14}
                             className="border-gold-300 focus:border-gold-500"
                           />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="endereco"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Endereço Completo</FormLabel>
+                        <FormControl>
+                          <Input {...field} className="border-gold-300 focus:border-gold-500" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -278,14 +164,50 @@ const PessoaFisicaJuridicaForm = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <FormField
                       control={form.control}
-                      name="telefoneCorporativo"
+                      name="cep"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Telefone Corporativo</FormLabel>
+                          <FormLabel>CEP</FormLabel>
                           <FormControl>
                             <Input 
                               {...field} 
-                              value={field.value ? maskPhone(field.value) : ''}
+                              value={maskCEP(field.value)}
+                              onChange={(e) => field.onChange(e.target.value)}
+                              maxLength={9}
+                              className="border-gold-300 focus:border-gold-500"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="cidade"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Cidade</FormLabel>
+                          <FormControl>
+                            <Input {...field} className="border-gold-300 focus:border-gold-500" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="telefone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Telefone</FormLabel>
+                          <FormControl>
+                            <Input 
+                              {...field} 
+                              value={maskPhone(field.value)}
                               onChange={(e) => field.onChange(e.target.value)}
                               maxLength={15}
                               className="border-gold-300 focus:border-gold-500"
@@ -298,10 +220,10 @@ const PessoaFisicaJuridicaForm = () => {
                     
                     <FormField
                       control={form.control}
-                      name="emailCorporativo"
+                      name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>E-Mail Corporativo</FormLabel>
+                          <FormLabel>E-Mail</FormLabel>
                           <FormControl>
                             <Input 
                               {...field} 
@@ -314,49 +236,128 @@ const PessoaFisicaJuridicaForm = () => {
                       )}
                     />
                   </div>
-                </div>
-                
-                <FormField
-                  control={form.control}
-                  name="informacoesAdicionais"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Informações Adicionais</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          {...field} 
-                          rows={5}
-                          className="border-gold-300 focus:border-gold-500" 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <div className="space-y-2">
-                  <FormLabel>Anexar Arquivo</FormLabel>
-                  <div className="flex items-center">
-                    <label className="btn-primary text-black cursor-pointer py-2 px-4 rounded">
-                      Escolher arquivo
-                      <input
-                        type="file"
-                        className="hidden"
-                        onChange={handleFileChange}
+                  
+                  {/* Empresa */}
+                  <div className="pt-4 border-t border-gray-200">
+                    <h3 className="text-lg font-semibold mb-4">Dados da Empresa (Opcional)</h3>
+                    
+                    <FormField
+                      control={form.control}
+                      name="nomeEmpresa"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Nome Da Empresa</FormLabel>
+                          <FormControl>
+                            <Input {...field} className="border-gold-300 focus:border-gold-500" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="cnpj"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>CNPJ</FormLabel>
+                          <FormControl>
+                            <Input 
+                              {...field} 
+                              value={field.value ? maskCNPJ(field.value) : ''}
+                              onChange={(e) => field.onChange(e.target.value)}
+                              maxLength={18}
+                              className="border-gold-300 focus:border-gold-500"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="telefoneCorporativo"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Telefone Corporativo</FormLabel>
+                            <FormControl>
+                              <Input 
+                                {...field} 
+                                value={field.value ? maskPhone(field.value) : ''}
+                                onChange={(e) => field.onChange(e.target.value)}
+                                maxLength={15}
+                                className="border-gold-300 focus:border-gold-500"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </label>
-                    <span className="ml-3 text-sm text-gray-500">
-                      {file ? file.name : "Nenhum arquivo escolhido"}
-                    </span>
+                      
+                      <FormField
+                        control={form.control}
+                        name="emailCorporativo"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>E-Mail Corporativo</FormLabel>
+                            <FormControl>
+                              <Input 
+                                {...field} 
+                                type="email"
+                                className="border-gold-300 focus:border-gold-500" 
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  </div>
+                  
+                  <FormField
+                    control={form.control}
+                    name="informacoesAdicionais"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Informações Adicionais</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            {...field} 
+                            rows={5}
+                            className="border-gold-300 focus:border-gold-500" 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <div className="space-y-2">
+                    <FormLabel>Anexar Arquivo</FormLabel>
+                    <div className="flex items-center">
+                      <label className="btn-primary text-black cursor-pointer py-2 px-4 rounded">
+                        Escolher arquivo
+                        <input
+                          type="file"
+                          className="hidden"
+                          onChange={handleFileChange}
+                        />
+                      </label>
+                      <span className="ml-3 text-sm text-gray-500">
+                        {file ? file.name : "Nenhum arquivo escolhido"}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <Button type="submit" className="w-full bg-gold-500 hover:bg-gold-600 text-black font-bold">
-                ENVIAR
-              </Button>
-            </form>
-          </Form>
+                
+                <Button type="submit" className="w-full bg-gold-500 hover:bg-gold-600 text-black font-bold">
+                  ENVIAR
+                </Button>
+              </form>
+            </Form>
+          </div>
         </div>
       </div>
     </div>
