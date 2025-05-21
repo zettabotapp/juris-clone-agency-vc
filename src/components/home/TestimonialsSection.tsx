@@ -13,9 +13,20 @@ const TestimonialsSection = () => {
     const style = document.createElement('style');
     style.textContent = `
       .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-google-reviews-slider-header-container,
-      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de a[href*="elfsight.com"] {
+      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de a[href*="elfsight.com"],
+      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-google-reviews-slider-popup-widget-header,
+      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-google-reviews-page-navigation-dots,
+      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-widget-toolbar,
+      [class*="free-google-reviews-widget"],
+      [data-text*="Free Google Reviews widget"],
+      [class*="eapps-widget"] [class*="-bottom"] {
         display: none !important;
         visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
       }
     `;
     document.head.appendChild(style);
