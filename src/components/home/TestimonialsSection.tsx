@@ -9,9 +9,21 @@ const TestimonialsSection = () => {
     script.async = true;
     document.body.appendChild(script);
 
+    // Adicionar CSS para esconder a mensagem de widget grátis
+    const style = document.createElement('style');
+    style.textContent = `
+      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de .eapps-google-reviews-slider-header-container,
+      .elfsight-app-a92b8084-ee49-4b47-b138-ff8c187139de a[href*="elfsight.com"] {
+        display: none !important;
+        visibility: hidden !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     return () => {
       // Limpeza ao desmontar o componente
       document.body.removeChild(script);
+      document.head.removeChild(style);
     };
   }, []);
 
