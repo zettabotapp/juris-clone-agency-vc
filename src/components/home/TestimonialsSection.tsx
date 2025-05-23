@@ -11,24 +11,9 @@ const TestimonialsSection = () => {
     document.body.appendChild(script);
     style.textContent = `
       /* Container para o widget e botão */
-      .reviews-container {
+        .reviews-container {
         position: relative !important;
-      }
-
-      /* Posicionar o botão sobre o badge */
-      .review-button-overlay {
-        position: absolute !important;
-        bottom: -20px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        z-index: 100000 !important;
-        background: #3B82F6 !important;
-        padding: 8px 16px !important;
-        border-radius: 4px !important;
-        color: white !important;
-        font-weight: 600 !important;
-        text-decoration: none !important;
-        transition: background-color 0.2s !important;
+        z-index: 1 !important; /* Adicionar z-index menor */
       }
 
       /* Posicionar o botão sobre o badge */
@@ -47,9 +32,9 @@ const TestimonialsSection = () => {
         transition: background-color 0.2s !important;
         margin-bottom: 8px !important;
         /* Adicionando margens laterais brancas */
-        box-shadow: 0 0 0 13px #f9fafb !important;
+        box-shadow: 0 0 0 11px #f9fafb !important;
         /* Opcional: adicionar um leve sombreamento para destacar */
-        font-size: 14px !important; /* Tamanho base para mobile */
+        font-size: 13px !important; /* Tamanho base para mobile */
       }
 
       /* Aumentar o tamanho do texto em telas maiores */
@@ -64,17 +49,6 @@ const TestimonialsSection = () => {
         .review-button-overlay {
           font-size: 16px !important;
         }
-      }
-
-      /* Ocultar badge do widget gratuito */
-      a[href*="elfsight.com"][style*="display:inline-flex"],
-      a[href*="elfsight.com"][style*="background-color:rgba(238,238,238,0.9)"],
-      .eapps-google-reviews-slider-header,
-      .eapps-google-reviews-slider-header-reviews-count,
-      div[style*="margin:8px auto"] {
-        visibility: hidden !important;
-        opacity: 0 !important;
-        height: 0 !important;
       }
 
       /* Ajustar margens do container principal */
@@ -82,14 +56,6 @@ const TestimonialsSection = () => {
         margin: 0 !important;
         padding: 0 !important;
         margin-bottom: 40px !important;
-      }
-
-      /* Garantir que as avaliações fiquem visíveis */
-      .eapps-google-reviews-slider-items,
-      .eapps-google-reviews-slider-item {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
       }
     `;
     document.head.appendChild(style);
