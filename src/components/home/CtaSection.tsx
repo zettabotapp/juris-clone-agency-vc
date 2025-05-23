@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 
 const CtaSection = () => {
@@ -8,7 +7,7 @@ const CtaSection = () => {
         <div className="bg-darkbg rounded-lg shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Image Column */}
-            <div className="relative h-auto md:h-full flex items-center justify-center p-0 overflow-hidden">
+            <div className="relative h-64 md:h-96 flex items-end justify-center p-0 overflow-hidden" style={{ alignSelf: 'self-end' }}>
               {/* Left gradient */}
               <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-darkbg via-darkbg/50 to-transparent z-10"></div>
               {/* Right gradient */}
@@ -16,7 +15,7 @@ const CtaSection = () => {
               <img 
                 src="/lovable-uploads/temos_solucao.jpg" 
                 alt="Advogada Trabalhista VC Advogados"
-                className="object-contain w-full h-auto max-h-[400px]"
+                className="object-cover w-full h-full"
               />
             </div>
                         
