@@ -8,7 +8,7 @@ const CtaSection = () => {
         <div className="bg-darkbg rounded-lg shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
             {/* Image Column */}
-            <div className="relative flex items-center justify-center p-4 md:p-6">
+            <div className="relative flex items-center justify-center p-0">
               <img 
                 src="/lovable-uploads/temos_solucao.png" 
                 alt="Advogada Trabalhista VC Advogados"
