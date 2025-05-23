@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 
 const CtaSection = () => {
@@ -5,18 +6,19 @@ const CtaSection = () => {
     <section className="py-16 bg-white">
       <div className="container-custom">
         <div className="bg-darkbg rounded-lg shadow-xl overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
             {/* Image Column */}
-            <div className="relative h-64 md:h-96 flex items-end justify-center p-0 overflow-hidden" style={{ alignSelf: 'self-end' }}>
+            <div className="relative flex items-center justify-center p-4 md:p-6">
               <img 
                 src="/lovable-uploads/temos_solucao.png" 
                 alt="Advogada Trabalhista VC Advogados"
-                className="object-contain w-full h-full max-w-full max-h-full px-4 py-4 md:p-0"
+                className="w-full h-auto max-w-full object-contain"
+                style={{ maxHeight: '350px' }}
               />
             </div>
                         
             {/* Content Column */}
-            <div className="p-6 md:p-8 lg:p-12">
+            <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 font-playfair">
                 Nós Temos a Solução para o seu Caso!
               </h2>
