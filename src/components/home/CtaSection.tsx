@@ -8,14 +8,10 @@ const CtaSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Image Column */}
             <div className="relative h-64 md:h-96 flex items-end justify-center p-0 overflow-hidden" style={{ alignSelf: 'self-end' }}>
-              {/* Left gradient */}
-              <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-darkbg via-darkbg/50 to-transparent z-10"></div>
-              {/* Right gradient */}
-              <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-darkbg via-darkbg/50 to-transparent z-10"></div>
               <img 
-                src="/lovable-uploads/temos_solucao.jpg" 
+                src="/lovable-uploads/temos_solucao.png" 
                 alt="Advogada Trabalhista VC Advogados"
-                className="object-cover w-full h-full"
+                className="object-contain w-full h-full max-w-full max-h-full px-4 py-4 md:p-0"
               />
             </div>
                         
