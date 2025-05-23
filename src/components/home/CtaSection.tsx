@@ -10,7 +10,7 @@ const CtaSection = () => {
             {/* Image Column */}
             <div className="relative h-64 md:h-96 flex items-end justify-center p-0 overflow-hidden" style={{ alignSelf: 'self-end' }}>
               <img 
-                src="/lovable-uploads/vieirasolucao.png" 
+                src="/lovable-uploads/19638c77-3cff-4886-b117-47992ceaa138.png" 
                 alt="VC Advogados Solução"
                 className="object-contain w-full h-full max-w-full max-h-full px-4 py-4 md:p-0"
               />
